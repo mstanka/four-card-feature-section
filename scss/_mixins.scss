@@ -1,0 +1,14 @@
+@mixin borderTop($color) {
+    border-top: 4px solid $color;
+}
+
+@mixin gridCard {
+  display: grid;  
+  justify-items: center;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 950px) {
+    @content;
+  }
+}

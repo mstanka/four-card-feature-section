@@ -1,0 +1,101 @@
+header {
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;   
+
+  @include media-md { 
+    max-width: 500px;
+  }
+
+  .lead {
+    padding: 1rem 1rem 3.5rem 1rem;
+    
+    @include media-md { 
+      padding: 1rem 0 3rem 0;
+    }
+  }
+}
+
+.cards {
+  max-width: 1300px;
+  margin: 0 auto;
+  @include gridCard;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 3fr));
+
+  @include media-md {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    padding: 2rem;
+    margin: 1rem;  
+    max-width: 340px;  
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px $grayish-blue;
+    text-align: left;
+
+    @include media-md {
+      margin: 1rem .5rem;
+      max-width: 360px;
+    }
+
+    h3 {
+      padding-bottom: .5rem;
+    }
+
+    img {
+      float: right;
+      padding-top: 1.8rem;
+    }
+  }
+
+  .supervisor {
+    @include borderTop($cyan-color);
+
+    @include media-md {
+      grid-row: 2 / 4;
+      grid-column: 1;
+      justify-self: right;
+    }
+  }
+
+  .team-builder {
+    @include borderTop($red-color);
+
+    @include media-md {
+      grid-row: 1 / 3;
+      grid-column: 2;
+    }
+  }
+
+  .karma {
+    @include borderTop($orange-color);
+
+    @include media-md {
+      grid-row: 3 / 5;
+      grid-column: 2;
+    }
+  }
+
+  .calculator {
+    @include borderTop($blue-color);
+
+    @include media-md {
+      grid-row: 2 / 4;
+      grid-column: 3;
+      justify-self: left;
+    }
+  }
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  
+  a { 
+    color: $link-color; 
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
