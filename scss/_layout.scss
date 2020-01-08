@@ -35,6 +35,11 @@ header {
     box-shadow: 1px 1px 10px 1px $grayish-blue;
     text-align: left;
 
+    &:hover {
+      transform: scale(.97);
+      transition: 1s ease-in-out;
+    }
+
     @include media-md {
       margin: 1rem .5rem;
       max-width: 360px;

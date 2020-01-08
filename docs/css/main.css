@@ -87,6 +87,13 @@ header .lead {
   text-align: left;
 }
 
+.cards .card:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
 @media screen and (min-width: 950px) {
   .cards .card {
     margin: 1rem .5rem;
